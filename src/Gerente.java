@@ -1,8 +1,10 @@
 
-public class Gerente extends Usuario{
-//classe gerente só vai chamar os métodos de GerenciarConta
+
+public class Gerente extends Usuario {
+
     private String cargo;
     private GerenciarConta gerencia;
+    private ContaBancaria conta;
     
     public Gerente(String cpf, String nome, String endereco, String dataNascimento, String cargo,
             GerenciarConta gerencia) {
@@ -27,10 +29,11 @@ public class Gerente extends Usuario{
     public void gerenciando(){
 
         
-        gerencia.verSaldo();
-        gerencia.exibirInfo();
+        gerencia.verSaldo(conta);
+        gerencia.exibirInfo(conta);
         gerencia.Permitir();
        
         
     }
+
 }

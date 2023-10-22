@@ -21,8 +21,8 @@ import java.util.Scanner;
 CadastroUsuario usuari = new CadastroUsuario();
 Gerente g1 = new Gerente("234433", "carlos", "123", "12042004", "gerente", null);
 GerenciarConta geren1 = new GerenciarConta(g1);
-AutorizacaoSeguranca autorizaçao = new AutorizacaoSeguranca();
- ContaBancaria contaAtual = null;
+AutorizacaoSeguranca autorizacao = new AutorizacaoSeguranca();
+ContaBancaria contaAtual = null;
  
        while(true){
      exibirMenu();
@@ -34,7 +34,7 @@ AutorizacaoSeguranca autorizaçao = new AutorizacaoSeguranca();
                 usuari.Cadastro();
                     break;
                 case 2:
-             
+
              System.out.println("digite nome do usuario para criar conta");
                String nomeUsuarioConta = sc.next();
              Usuario usuariopelonome =  usuari.escolherUsuario(nomeUsuarioConta);
@@ -68,13 +68,19 @@ AutorizacaoSeguranca autorizaçao = new AutorizacaoSeguranca();
            
             break;
                   case 3:
-        
+
+                  if( contaAtual != null){
+
+                
                   System.out.println("digite o codigo da conta");
              int c = sc.nextInt();     
              ContaBancaria conta = geren1.encontrarConta(c);
-             autorizaçao.verificarSenha(conta);
+             autorizacao.verificarSenha(conta);
              contaAtual = conta;
              System.out.println("voce entrou na conta");
+                  } else {
+                    System.out.println("primeiro crie uma conta para poder entrar nela");
+                  }
                  break;
                case 4:
              if(contaAtual!=null){

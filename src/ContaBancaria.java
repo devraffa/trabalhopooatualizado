@@ -1,7 +1,7 @@
 
 
 
-public class ContaBancaria extends AutorizacaoSeguranca {
+public class ContaBancaria {
 
     private int codigo;
     private String login;
@@ -56,12 +56,19 @@ public void sacar(double valor) throws SaldoInsuficienteException, ValorInvalido
     }
 }
 
-  public void depositar(double valor) throws ValorInvalidoException{
+public void depositar(double valor) throws ValorInvalidoException {
+    if (valor <= 0.0) {
+        throw new ValorInvalidoException("Valor de depósito inválido. O valor do depósito deve ser maior que zero.");
+    }
+    setSaldo(getSaldo() + valor);
+}
+
+  /*public void depositar(double valor) throws ValorInvalidoException{
     if(valor<=0){
-        throw new ValorInvalidoException("Valo insuficente para o deposito");
+        throw new ValorInvalidoException("Valor insuficente para o deposito");
   }
         setSaldo(getSaldo()+valor);
-}
+}*/
 
 public void setSaldo(double saldo) {
     this.saldo = saldo;

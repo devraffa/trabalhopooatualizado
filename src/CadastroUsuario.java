@@ -46,6 +46,17 @@ public class CadastroUsuario  {
 
 
    }
+   while(ValidaCpf(Cpf)==false){
+     System.out.println("seu cpf esta incorreto");
+     System.out.println("digite novamente");
+     Cpf = teclado.nextLine();
+     if(ValidaCpf(Cpf)){
+        System.out.println("cpf correto");
+       break; 
+    }
+
+
+   }
     
 
         if((!existirUsuarioCpf(Cpf))&&(!existirUsuarioEndereco(endereco))&&(!existirUsuarioNome(nome))){

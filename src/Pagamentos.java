@@ -11,6 +11,7 @@ public class Pagamentos {
     public double pagarAgua(ContaBancaria contaPagar) {
    
         double valor = 20 + random.nextDouble() * 80;
+        System.out.println(valor);
        
         if(contaPagar.getSaldo()>=valor){
           contaPagar.setSaldo(contaPagar.getSaldo()-valor);
@@ -23,19 +24,16 @@ public class Pagamentos {
     }
 
 
-   
-
     public double pagarEnergia() {
-        // Gere um valor aleatório para o pagamento de energia (por exemplo, entre 50 e 200)
         double valor = 50 + random.nextDouble() * 150;
         return valor;
     }
 
  
     public double pagarInternet() {
-        // Gere um valor aleatório para o pagamento de internet (por exemplo, entre 30 e 100)
         double valor = 30 + random.nextDouble() * 70;
         return valor;
     }
+    
 }
 
