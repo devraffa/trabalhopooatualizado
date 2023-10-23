@@ -85,7 +85,8 @@ ContaBancaria contaAtual = null;
                case 4:
              if(contaAtual!=null){
     
-             geren1.realizarOperacoes(contaAtual,sc);   
+             geren1.realizarOperacoes(contaAtual,sc); 
+               
         }else{
                 System.out.println("voce nao entrou na conta");
              }
