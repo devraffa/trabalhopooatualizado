@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class Pagamentos {
      private Random random;
-     private double ultimoValorPago;
 
     public Pagamentos() {
         random = new Random();
-        ultimoValorPago = 0.0;
     }
 
     public double pagarAgua(ContaBancaria contaPagar) {
@@ -52,10 +50,6 @@ public class Pagamentos {
             System.out.println("valor insuficiente para pagar a conta");
          return contaPagar.getSaldo();
         }
-    }
-
-    public double getUltimoValorPago() {
-        return ultimoValorPago;
     }
 
     public void menuPagamentos ( ContaBancaria conta){

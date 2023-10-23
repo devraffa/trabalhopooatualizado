@@ -5,14 +5,17 @@ public class Usuario {
     private String nome;
     private String endereco;
     private String dataNascimento;
+
     
+
+
     public Usuario(String cpf, String nome, String endereco, String dataNascimento) {
         this.cpf = cpf;
         this.nome = nome;
         this.endereco = endereco;
         this.dataNascimento = dataNascimento;
     }
-
+    
     public String getCpf() {
         return cpf;
     }
@@ -42,7 +45,9 @@ public class Usuario {
     public String toString() {
         return "Usuario [cpf=" + cpf + ", nome=" + nome + ", endereco=" + endereco + ", dataNascimento="
                 + dataNascimento + "]";
-    }
+    
    
     
+}
+
 }

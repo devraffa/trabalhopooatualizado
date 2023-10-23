@@ -19,7 +19,7 @@ import java.util.Scanner;
     public static void main(String[] args)throws SaldoInsuficienteException, ValorInvalidoException,ContaNaoExisteException {
      
 CadastroUsuario usuari = new CadastroUsuario();
-Gerente g1 = new Gerente("234433", "carlos", "123", "12042004", "gerente", null);
+Gerente g1 = new Gerente("111.222.333-89", "CRISTIANO", "limoeiro", "13/04/1989");
 GerenciarConta geren1 = new GerenciarConta(g1);
 AutorizacaoSeguranca autorizacao = new AutorizacaoSeguranca();
 ContaBancaria contaAtual = null;
